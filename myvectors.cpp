@@ -4,17 +4,23 @@
  	vec= new double[size];
 //constructor yazilan boyutta double hafiza ayirdi
  }
-MyVectors::my_assign(int n,double x){
-
-  for (int i = 0; i < n; i++) {
-    vec[i]=x;
-  }
-}//my_assign sonu
+ MyVectors::MyVectors(){
+   size=1;
+ 	vec= new double[size];
+//Default constructor 1 tane double hafiza ayirdi
+}
 
 MyVectors::my_boyut_ayar(int yeni_boyut){
   size=yeni_boyut;
   vec=realloc(vec,size*sizeof(double));//doublenin boyutu
 }//my_boyut_ayar sonu
+MyVectors::my_assign(int n,double x){
+  if(n<size)
+  my_boyut_ayar(n);
+  for (int i = 0; i < n; i++) {
+    vec[i]=x;
+  }
+}//my_assign sonu
 
  MyVectors::my_push_back(double x){
 
@@ -35,7 +41,6 @@ MyVectors::my_boyut_ayar(int yeni_boyut){
    for (int i = 0; i < knm; i++) {
      vec[i]=ary[i];
    }
-
  }//yazilan konumdan onceki yerlere yeni elemanlar ekledi gereken boyutu ayarladi*/
 
 MyVectors::my_erase(int knmb,int knms){
@@ -72,4 +77,11 @@ MyVectors::my_emplace(int n,double x){
 }
 MyVectors::my_emplace_back(double x){
   my_push_back(x); //TAM ISLEV SORULACAK
+}
+
+MyVectors::my_ata(int n,double x){
+  if(n>size-1){
+    break;
+  }
+  vec[n]=x;
 }

@@ -6,7 +6,7 @@ class MyVectors{
 
 
 	public:
-
+		MyVectors();//default constructor
 		MyVectors(int);//constractor vektor boyutunu parametre olarak alacak*
 		my_assign(int,double);// Baslangictan itibaren n e kadar olan degerlere istenen sayiyi yazar*
 		my_push_back(double);// Vektor sonuna eleman atar ve boyutu arttirir*
@@ -18,5 +18,5 @@ class MyVectors{
 		my_emplace(int,double);// belirtilen yere eleman ekleyerek vektoru buyutur*
 		my_emplace_back(double);// vektor sonuna eleman ekler ve vektoru buyutur* TAM ISLEV SORULACAK
 		my_boyut_ayar(int);//vektor boyutunu ayarlayacak*
-
+		my_ata(int,double);//belirtilen yerdeki degerin ustune eleman yazar
 };

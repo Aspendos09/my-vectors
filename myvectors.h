@@ -20,5 +20,5 @@ class MyVectors{
 		void	my_boyut_ayar(int);//vektor boyutunu ayarlayacak*+
 		void	my_ata(int,double);//belirtilen yerdeki degerin ustune eleman yazar
 		void	my_print(int);//belirtilen yerdeki degeri ekrana yazar+
-		int		my_getSize(void);//boyutu getirir+
+		int	my_getSize(void);//boyutu getirir+
 };
